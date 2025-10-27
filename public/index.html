@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Expense Tracker Pro</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>💰 Expense Tracker Pro</h1>
+
+  <!-- Dashboard -->
+  <section id="dashboard">
+    <div class="stat income-box">
+      <h3>Income</h3>
+      <p id="totalIncome">₱0</p>
+    </div>
+    <div class="stat expense-box">
+      <h3>Expense</h3>
+      <p id="totalExpense">₱0</p>
+    </div>
+    <div class="stat balance-box">
+      <h3>Balance</h3>
+      <p id="balance">₱0</p>
+    </div>
+  </section>
+
+  <!-- Form -->
+  <form id="transactionForm">
+    <select id="type">
+      <option value="income">Income</option>
+      <option value="expense">Expense</option>
+    </select>
+    <input type="number" id="amount" placeholder="Amount" required>
+    <input type="text" id="category" placeholder="Category">
+    <input type="text" id="description" placeholder="Description">
+    <input type="date" id="date">
+    <button type="submit">Add</button>
+  </form>
+
+  <!-- Search / Filter -->
+  <div id="filterBar">
+    <input type="text" id="search" placeholder="Search by category or description...">
+    <select id="filterType">
+      <option value="">All</option>
+      <option value="income">Income</option>
+      <option value="expense">Expense</option>
+    </select>
+  </div>
+
+  <!-- Chart -->
+  <div class="chart-container">
+    <canvas id="summaryChart"></canvas>
+  </div>
+
+  <!-- Transactions -->
+  <div id="transactions"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
