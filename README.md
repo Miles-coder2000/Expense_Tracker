@@ -1,8 +1,3 @@
-readme_content = """# 💰 CyraExpenseApp
-**Enhanced Expense Tracker (Full-Stack Application)**  
-Developed for personal and client use (Cy) as part of the Stratix-I.T portfolio.  
-This app provides a simple yet powerful interface to manage incomes and expenses with data visualization and filters.
-
 ---
 
 ## 🧭 Overview
