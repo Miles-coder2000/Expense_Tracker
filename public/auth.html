@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Login - Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-box">
+      <h1>Student Expense Tracker</h1>
+
+      <div id="authTabs" class="auth-tabs">
+        <button class="tab-btn active" data-tab="login">Login</button>
+        <button class="tab-btn" data-tab="register">Register</button>
+      </div>
+
+      <div id="loginForm" class="auth-form active">
+        <h2>Welcome Back</h2>
+        <form id="loginFormElement">
+          <input type="email" id="loginEmail" placeholder="Email" required>
+          <input type="password" id="loginPassword" placeholder="Password" required>
+          <button type="submit" class="auth-btn">Login</button>
+        </form>
+        <p class="auth-link">
+          <a href="#" id="showForgotPassword">Forgot Password?</a>
+        </p>
+      </div>
+
+      <div id="registerForm" class="auth-form">
+        <h2>Create Student Account</h2>
+        <form id="registerFormElement">
+          <input type="text" id="registerFullName" placeholder="Full Name" required>
+          <input type="email" id="registerEmail" placeholder="Email" required>
+          <input type="text" id="registerStudentId" placeholder="Student ID (Optional)">
+          <input type="text" id="registerSchool" placeholder="School/University (Optional)">
+          <input type="text" id="registerMajor" placeholder="Major/Course (Optional)">
+          <input type="password" id="registerPassword" placeholder="Password (min 6 characters)" required>
+          <input type="password" id="registerConfirmPassword" placeholder="Confirm Password" required>
+          <button type="submit" class="auth-btn">Register</button>
+        </form>
+      </div>
+
+      <div id="forgotPasswordForm" class="auth-form">
+        <h2>Reset Password</h2>
+        <p class="reset-info">Enter your email to receive a password reset link.</p>
+        <form id="forgotPasswordFormElement">
+          <input type="email" id="forgotEmail" placeholder="Email" required>
+          <button type="submit" class="auth-btn">Send Reset Link</button>
+        </form>
+        <p class="auth-link">
+          <a href="#" id="backToLogin">Back to Login</a>
+        </p>
+      </div>
+
+      <div id="authMessage" class="auth-message"></div>
+    </div>
+  </div>
+
+  <script type="module" src="auth.js"></script>
+</body>
+</html>
